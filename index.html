@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <!--[if IE]>
+  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+<body>
+  <div class="blobs">
+    <div class="main-blob-container">
+      <div class="main-blob"></div>
+    </div>
+      <div class="blob">2</div>
+      <div class="blob">3</div>
+      <div class="blob">4</div>
+      <div class="blob">5</div>
+      <div class="blob">6</div>
+      <div class="blob">7</div>
+      <div class="blob">8</div>
+      <div class="blob">1</div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+</html>

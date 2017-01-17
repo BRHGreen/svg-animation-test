@@ -1,0 +1,178 @@
+/* line 12, ../sass/main.scss */
+body {
+  background: white;
+  background-size: cover;
+}
+
+/* line 17, ../sass/main.scss */
+.blobs {
+  filter: url("#goo");
+  position: relative;
+  text-align: center;
+  margin: 100px auto;
+  border: 1px solid white;
+}
+
+@keyframes blob-twelve-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, -130px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-one-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(89.65517px, -89.65517px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-two-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(130px, 0px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-three-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(89.65517px, 89.65517px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-four-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0px, 130px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-five-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-89.65517px, 89.65517px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-six-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-130px, 0px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-seven-o-clock {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-89.65517px, -89.65517px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* line 125, ../sass/main.scss */
+.main-blob-container {
+  margin: 75px auto;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+/* line 131, ../sass/main.scss */
+.main-blob {
+  margin: 0 auto;
+  background: #8800ff;
+  left: 42%;
+  top: 20%;
+  width: 200px;
+  height: 200px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  border-radius: 100%;
+}
+
+/* line 145, ../sass/main.scss */
+.blob {
+  position: absolute;
+  background: #8800ff;
+  top: 50%;
+  margin-top: -12.5px;
+  left: 50%;
+  margin-left: -12.5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 100%;
+  animation: blob-twelve-o-clock cubic-bezier(0.77, 0, 0.175, 1) 7s;
+}
+/* line 161, ../sass/main.scss */
+.blob:nth-child(2) {
+  animation-name: blob-one-o-clock;
+  animation-delay: .5s;
+}
+/* line 165, ../sass/main.scss */
+.blob:nth-child(3) {
+  animation-name: blob-two-o-clock;
+  animation-delay: 1s;
+}
+/* line 169, ../sass/main.scss */
+.blob:nth-child(4) {
+  animation-name: blob-three-o-clock;
+  animation-delay: 1.5s;
+}
+/* line 173, ../sass/main.scss */
+.blob:nth-child(5) {
+  animation-name: blob-four-o-clock;
+  animation-delay: 2s;
+}
+/* line 177, ../sass/main.scss */
+.blob:nth-child(6) {
+  animation-name: blob-five-o-clock;
+  animation-delay: 2.5s;
+}
+/* line 181, ../sass/main.scss */
+.blob:nth-child(7) {
+  animation-name: blob-six-o-clock;
+  animation-delay: 3s;
+}
+/* line 185, ../sass/main.scss */
+.blob:nth-child(8) {
+  animation-name: blob-seven-o-clock;
+  animation-delay: 3.5s;
+}
