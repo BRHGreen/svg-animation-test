@@ -13,95 +13,175 @@ body {
   border: 1px solid white;
 }
 
-@keyframes blob-twelve-o-clock {
+@keyframes blob-one {
   0% {
     transform: translate(0, 0);
   }
   40% {
     transform: translate(0, -130px);
   }
+  80% {
+    transform: translate(0, -130px);
+  }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-one-o-clock {
+@keyframes blob-two {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(89.65517px, -89.65517px);
+    transform: translate(65px, -115px);
+  }
+  80% {
+    transform: translate(65px, -115px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-two-o-clock {
+@keyframes blob-three {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(130px, 0px);
+    transform: translate(115px, -65px);
+  }
+  80% {
+    transform: translate(115px, -65px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-three-o-clock {
+@keyframes blob-four {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(89.65517px, 89.65517px);
+    transform: translate(130px, 0);
+  }
+  80% {
+    transform: translate(130px, 0);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-four-o-clock {
+@keyframes blob-five {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(0px, 130px);
+    transform: translate(115px, 65px);
+  }
+  80% {
+    transform: translate(115px, 65px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-five-o-clock {
+@keyframes blob-six {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(-89.65517px, 89.65517px);
+    transform: translate(65px, 115px);
+  }
+  80% {
+    transform: translate(65px, 115px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-six-o-clock {
+@keyframes blob-seven {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(-130px, 0px);
+    transform: translate(0, 130px);
+  }
+  80% {
+    transform: translate(0, 130px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-@keyframes blob-seven-o-clock {
+@keyframes blob-eight {
   0% {
     transform: translate(0, 0);
   }
   40% {
-    transform: translate(-89.65517px, -89.65517px);
+    transform: translate(-65px, 115px);
+  }
+  80% {
+    transform: translate(-65px, 115px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
-/* line 125, ../sass/main.scss */
+@keyframes blob-nine {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-115px, 65px);
+  }
+  80% {
+    transform: translate(-115px, 65px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-ten {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-130px, 0);
+  }
+  80% {
+    transform: translate(-130px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-eleven {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-115px, -65px);
+  }
+  80% {
+    transform: translate(-115px, -65px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes blob-twelve {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-65px, -115px);
+  }
+  80% {
+    transform: translate(-65px, -115px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* line 210, ../sass/main.scss */
 .main-blob-container {
   margin: 75px auto;
   height: 200px;
@@ -109,7 +189,7 @@ body {
   text-align: center;
 }
 
-/* line 131, ../sass/main.scss */
+/* line 216, ../sass/main.scss */
 .main-blob {
   margin: 0 auto;
   background: #8800ff;
@@ -124,55 +204,75 @@ body {
   border-radius: 100%;
 }
 
-/* line 145, ../sass/main.scss */
+/* line 230, ../sass/main.scss */
 .blob {
   position: absolute;
   background: #8800ff;
   top: 50%;
-  margin-top: -12.5px;
+  margin-top: -15px;
   left: 50%;
-  margin-left: -12.5px;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   color: white;
   font-size: 20px;
   border-radius: 100%;
-  animation: blob-twelve-o-clock cubic-bezier(0.77, 0, 0.175, 1) 7s;
+  animation: blob-one cubic-bezier(0.77, 0, 0.175, 1) 4s;
 }
-/* line 161, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 .blob:nth-child(2) {
-  animation-name: blob-one-o-clock;
-  animation-delay: .5s;
+  animation-name: blob-two;
+  animation-delay: 0.2s;
 }
-/* line 165, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 .blob:nth-child(3) {
-  animation-name: blob-two-o-clock;
+  animation-name: blob-three;
+  animation-delay: 0.4s;
+}
+/* line 255, ../sass/main.scss */
+.blob:nth-child(4) {
+  animation-name: blob-four;
+  animation-delay: 0.6s;
+}
+/* line 259, ../sass/main.scss */
+.blob:nth-child(5) {
+  animation-name: blob-five;
+  animation-delay: 0.8s;
+}
+/* line 263, ../sass/main.scss */
+.blob:nth-child(6) {
+  animation-name: blob-six;
   animation-delay: 1s;
 }
-/* line 169, ../sass/main.scss */
-.blob:nth-child(4) {
-  animation-name: blob-three-o-clock;
-  animation-delay: 1.5s;
+/* line 267, ../sass/main.scss */
+.blob:nth-child(7) {
+  animation-name: blob-seven;
+  animation-delay: 1.2s;
 }
-/* line 173, ../sass/main.scss */
-.blob:nth-child(5) {
-  animation-name: blob-four-o-clock;
+/* line 271, ../sass/main.scss */
+.blob:nth-child(8) {
+  animation-name: blob-eight;
+  animation-delay: 1.4s;
+}
+/* line 275, ../sass/main.scss */
+.blob:nth-child(9) {
+  animation-name: blob-nine;
+  animation-delay: 1.6s;
+}
+/* line 279, ../sass/main.scss */
+.blob:nth-child(10) {
+  animation-name: blob-ten;
+  animation-delay: 1.8s;
+}
+/* line 283, ../sass/main.scss */
+.blob:nth-child(11) {
+  animation-name: blob-eleven;
   animation-delay: 2s;
 }
-/* line 177, ../sass/main.scss */
-.blob:nth-child(6) {
-  animation-name: blob-five-o-clock;
-  animation-delay: 2.5s;
-}
-/* line 181, ../sass/main.scss */
-.blob:nth-child(7) {
-  animation-name: blob-six-o-clock;
-  animation-delay: 3s;
-}
-/* line 185, ../sass/main.scss */
-.blob:nth-child(8) {
-  animation-name: blob-seven-o-clock;
-  animation-delay: 3.5s;
+/* line 287, ../sass/main.scss */
+.blob:nth-child(12) {
+  animation-name: blob-twelve;
+  animation-delay: 2.2s;
 }

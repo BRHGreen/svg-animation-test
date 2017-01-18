@@ -1,11 +1,11 @@
 @import "compass/css3";
 
-$blob-size: 25px;
-
-$radius: 130px;
-$fourtyFive: 2 * ($radius / 2.9);
-// $thirty:2 * ($radius / 2.9);
-
+$blob-size:   30px;
+$radius:      130px;
+$thirty:          ($radius / 2.6) + ($blob-size / 2);
+$sixty:       2 * ($radius / 2.6) + ($blob-size / 2);
+$fourtyFive:  2 * ($radius / 2.9);
+$time:        .2s;
 
 
 
@@ -23,11 +23,14 @@ body{
 }
 
 
-@keyframes blob-twelve-o-clock{
+@keyframes blob-one{
   0%{
     transform: translate(0,0);
   }
   40%{
+    transform: translate(0, -$radius);
+  }
+  80%{
     transform: translate(0, -$radius);
   }
 
@@ -36,12 +39,15 @@ body{
   }
 }
 
-@keyframes blob-one-o-clock{
+@keyframes blob-two{
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate($fourtyFive, -$fourtyFive);
+    transform: translate($thirty, -$sixty);
+  }
+  80%{
+    transform: translate($thirty, -$sixty);
   }
   100%{
     transform: translate(0,0);
@@ -49,48 +55,60 @@ body{
 }
 
 
-@keyframes blob-two-o-clock{
+@keyframes blob-three{
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate($radius, 0px);
+    transform: translate($sixty, -$thirty);
+  }
+  80%{
+    transform: translate($sixty, -$thirty);
   }
   100%{
     transform: translate(0,0);
   }
 }
 
-@keyframes blob-three-o-clock{
+@keyframes blob-four{
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate($fourtyFive, $fourtyFive);
+    transform: translate($radius, 0);
+  }
+  80%{
+    transform: translate($radius, 0);
   }
   100%{
     transform: translate(0,0);
   }
 }
 
-@keyframes blob-four-o-clock{
+@keyframes blob-five{
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate(0px, $radius);
+    transform: translate($sixty, $thirty);
+  }
+  80%{
+    transform: translate($sixty, $thirty);
   }
   100%{
     transform: translate(0,0);
   }
 }
 
-@keyframes blob-five-o-clock{
+@keyframes blob-six{
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate(-$fourtyFive, $fourtyFive);
+    transform: translate($thirty, $sixty);
+  }
+  80%{
+    transform: translate($thirty, $sixty);
   }
   100%{
     transform: translate(0,0);
@@ -98,30 +116,97 @@ body{
 }
 
 
-@keyframes blob-six-o-clock {
+@keyframes blob-seven {
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate(-$radius, 0px);
+    transform: translate(0, $radius);
+  }
+  80%{
+    transform: translate(0, $radius);
   }
 
   100%{
     transform: translate(0,0);
   }
 }
-@keyframes blob-seven-o-clock {
+@keyframes blob-eight {
   0%{
     transform: translate(0,0);
   }
   40%{
-    transform: translate(-$fourtyFive, -$fourtyFive);
+    transform: translate(-$thirty, $sixty);
+  }
+  80%{
+    transform: translate(-$thirty, $sixty);
   }
 
   100%{
     transform: translate(0,0);
   }
 }
+@keyframes blob-nine {
+  0%{
+    transform: translate(0,0);
+  }
+  40%{
+    transform: translate(-$sixty, $thirty);
+  }
+  80%{
+    transform: translate(-$sixty, $thirty);
+  }
+
+  100%{
+    transform: translate(0,0);
+  }
+}
+@keyframes blob-ten {
+  0%{
+    transform: translate(0,0);
+  }
+  40%{
+    transform: translate(-$radius, 0);
+  }
+  80%{
+    transform: translate(-$radius, 0);
+  }
+
+  100%{
+    transform: translate(0,0);
+  }
+}
+@keyframes blob-eleven {
+  0%{
+    transform: translate(0,0);
+  }
+  40%{
+    transform: translate(-$sixty, -$thirty);
+  }
+  80%{
+    transform: translate(-$sixty, -$thirty);
+  }
+
+  100%{
+    transform: translate(0,0);
+  }
+}
+@keyframes blob-twelve {
+  0%{
+    transform: translate(0,0);
+  }
+  40%{
+    transform: translate(-$thirty, -$sixty);
+  }
+  80%{
+    transform: translate(-$thirty, -$sixty);
+  }
+
+  100%{
+    transform: translate(0,0);
+  }
+}
+
 .main-blob-container {
   margin: 75px auto;
   height:200px;
@@ -144,7 +229,8 @@ body{
 
 .blob{
   position:absolute;
-  background:#8800ff;
+  background: #8800ff;
+  // background: black;
   top: 50%;
   margin-top: -$blob-size/2;
   left: 50%;
@@ -156,34 +242,50 @@ body{
   color:white;
   font-size:20px;
   border-radius:100%;
-  animation:blob-twelve-o-clock cubic-bezier(0.770, 0.000, 0.175, 1.000) 7s;
+  animation:blob-one cubic-bezier(0.770, 0.000, 0.175, 1.000) 4s;
 
   &:nth-child(2){
-    animation-name:blob-one-o-clock;
-    animation-delay: .5s;
+    animation-name:blob-two;
+    animation-delay: $time;
   }
   &:nth-child(3){
-    animation-name:blob-two-o-clock;
-    animation-delay: 1s;
+    animation-name:blob-three;
+    animation-delay: $time * 2;
   }
   &:nth-child(4){
-    animation-name:blob-three-o-clock;
-    animation-delay: 1.5s;
+    animation-name:blob-four;
+    animation-delay: $time * 3;
   }
   &:nth-child(5){
-    animation-name:blob-four-o-clock;
-    animation-delay: 2s;
+    animation-name:blob-five;
+    animation-delay: $time * 4;
   }
   &:nth-child(6){
-    animation-name:blob-five-o-clock;
-    animation-delay: 2.5s;
+    animation-name:blob-six;
+    animation-delay: $time * 5;
   }
   &:nth-child(7){
-    animation-name:blob-six-o-clock;
-    animation-delay: 3s;
+    animation-name:blob-seven;
+    animation-delay: $time * 6;
   }
   &:nth-child(8){
-    animation-name:blob-seven-o-clock;
-    animation-delay: 3.5s;
+    animation-name:blob-eight;
+    animation-delay: $time * 7;
+  }
+  &:nth-child(9){
+    animation-name:blob-nine;
+    animation-delay: $time * 8;
+  }
+  &:nth-child(10){
+    animation-name:blob-ten;
+    animation-delay: $time * 9;
+  }
+  &:nth-child(11){
+    animation-name:blob-eleven;
+    animation-delay: $time * 10;
+  }
+  &:nth-child(12){
+    animation-name:blob-twelve;
+    animation-delay: $time * 11;
   }
 }
